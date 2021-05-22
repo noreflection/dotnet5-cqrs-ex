@@ -1,5 +1,5 @@
-﻿using MediatR;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using MediatR;
 
 public interface ICommand<T> : IRequest<T>
 {
@@ -9,7 +9,7 @@ public record CreateOrder : ICommand<string>
 {
     [Required] public int Id;
     [Required] public int CustomerId;
-};
+}
 
 public record AddProduct : ICommand<string>
 {
